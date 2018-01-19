@@ -1,6 +1,9 @@
 # Ansible-Playbooks
 A collection of useful Ansible playbooks and roles that I have created, modified, or used.
 
+# Contributing
+I am open to edits, having additional playbooks, and criticism. If you would like to edit, please follow the naming convention: system-verb-noun, such as tux-update-linux.yml for a playbook that updates Linux, or cent-update-httpd.yml for a playbook that only updates httpd on CentOS systems. Other than that, enjoy!
+
 ## Cloud
 
 ## Linux
