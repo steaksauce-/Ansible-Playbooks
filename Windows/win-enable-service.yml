@@ -1,0 +1,9 @@
+---
+- name: Start and enable a service on Windows
+  hosts: all
+  tasks:
+    - name: Start and enable specified service
+      win_service:
+        name: '{{ service-name }}'
+        start_mode: auto
+        state: started

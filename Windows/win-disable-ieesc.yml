@@ -1,0 +1,7 @@
+---
+- name: Disable IE ESC
+  hosts: all
+  gather_facts: false
+  tasks:
+    - name: Run powershell script to disable IE ESC for Administrators
+      script: "files/disable-ieesc.ps1"

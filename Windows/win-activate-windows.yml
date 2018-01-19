@@ -1,0 +1,8 @@
+---
+- name: Activate Windows
+  hosts: all
+  tasks:
+  - name: Activate Windows with SLMGR
+    win_shell: cscript slmgr.vbs /ipk {{ activation-key }}
+    args:
+      chdir: C:\Windows\System32\

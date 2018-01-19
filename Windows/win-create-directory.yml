@@ -1,0 +1,9 @@
+---
+- name: Create directory
+  hosts: all
+  tasks:
+    - name: Create specified directory
+      win_file:
+        path: {{ folder-path }}
+        state: directory
+

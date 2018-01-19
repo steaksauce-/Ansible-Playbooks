@@ -1,0 +1,8 @@
+---
+- name: Confirgure DNS for all adapters
+  hosts: all
+  tasks:
+    - name: Configure all adapters to use specified DNS Servers
+      win_dns_client:
+        adapter_names: "*"
+        ipv4_addresses: {{ dns-servers }}

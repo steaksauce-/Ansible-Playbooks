@@ -1,0 +1,9 @@
+- name: Install Software with Chocolatey
+  hosts: all
+  tasks:
+    - name: Install software package
+      win_chocolatey:
+        name: '{{ package }}'
+        ignore_checksums: yes
+        state: present
+     

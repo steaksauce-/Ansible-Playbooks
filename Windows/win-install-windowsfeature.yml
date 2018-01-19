@@ -1,0 +1,15 @@
+---
+- name: Install Windows Features
+  hosts: all
+  tasks:
+    - name: Install specified Windows Feature
+      win_feature:
+        name: '{{ win-feature }}'
+        state: present
+        
+      register: feature_result
+    
+    - name: Reboot, if needed
+      win_reboot:
+      when: feature_result.reboot_required
+

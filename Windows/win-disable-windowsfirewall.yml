@@ -1,0 +1,12 @@
+---
+- name: Disable Windows Firewall on all Profiles
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Disable Windows Firewall
+      win_firewall:
+        state: disabled
+        profiles:
+        - Domain
+        - Public
+        - Private

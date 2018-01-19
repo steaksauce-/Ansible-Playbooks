@@ -1,0 +1,8 @@
+---
+- name: Download url
+  hosts: all
+  tasks:
+    - name: Download specified url
+      win_get_url:
+        url: '{{ file-url }}'
+        dest: '{{ file-destination }}'

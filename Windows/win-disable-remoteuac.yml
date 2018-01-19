@@ -1,0 +1,10 @@
+---
+- name: Disable IE ESC
+  hosts: all
+  tasks:
+    - name: Disable Remote UAC
+      win_regedit:
+        path: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System
+        name: LocalAccountTokenFilterPolicy
+        data: 1
+        type: dword

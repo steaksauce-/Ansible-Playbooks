@@ -1,0 +1,12 @@
+---
+- name: Enable Windows Firewall on all Profiles
+  hosts: all
+  gather_facts: no
+  tasks:
+    - name: Enable Windows Firewall
+      win_firewall:
+        state: enabled
+        profiles:
+        - Domain
+        - Public
+        - Private
