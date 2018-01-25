@@ -95,6 +95,7 @@
         name: Docker-CE
         description: Docker CE Repo
         baseurl: https://download.docker.com/linux/fedora/$releasever/$basearch/stable
+        gpgkey: https://download.docker.com/linux/fedora/gpg
       when:
         ansible_distribution == 'Fedora'
     
@@ -103,6 +104,7 @@
         name: Docker-CE
         description: Docker CE Repo
         baseurl: https://download.docker.com/linux/centos/$releasever/$basearch/stable
+        gpgkey: https://download.docker.com/linux/centos/gpg
       when:
         ansible_distribution == 'CentOS'
         or
