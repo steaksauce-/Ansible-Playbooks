@@ -9,6 +9,8 @@ I am open to edits, having additional playbooks, and criticism. If you would lik
 ## Linux
 ### tux-install-dockerce.yml
 This runs the neccessary commands to install docker-ce on a RedHat, Centos, Fedora, Debian, or Ubuntu system. Please note that this playbook presumes you are using systemd.
+Credit where credit is due:
+Some of the Ubuntu/Debian stuff I modified from [here.](http://clouds.freeideas.cz/subdom/clouds/2017/07/26/ansible-install-docker-ce/)
 
 ### tux-update-linux.yml
 This updates linux on RedHat, CentOS, Fedora, Debian, or Ubuntu systems.
