@@ -1,4 +1,4 @@
---- #Disable Repo YUM Only
+--- #Disable Repo RHEL Only
 - hosts: all
   become: yes
   become_method: sudo
@@ -9,5 +9,5 @@
     yum_repository:
         name: "{{ item }}"
         state: absent
-    notify: yum-clean-metadata
+    
     
