@@ -1,0 +1,13 @@
+--- #Disable Repo RHEL Only
+- hosts: all
+  become: yes
+  become_method: sudo
+  connection: ssh
+  
+  tasks:
+  - name: Disable Repo
+    yum_repository:
+        name: "{{ item }}"
+        state: absent
+    
+    
